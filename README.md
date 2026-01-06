@@ -70,8 +70,11 @@ python3 MohoScriptsManager.py
 ---
 
 ## 🖼︎ Screenshot
+
 ![](screenshot/2026-01-07.png)
 
 ## 💗 Thanks
+
 This tool was written using Gemini.
+
 If you find this tool useful, please share it with more Moho animation creators!
