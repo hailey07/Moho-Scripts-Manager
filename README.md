@@ -71,7 +71,8 @@ python3 MohoScriptsManager.py
 
 ## 🖼︎ Screenshot
 
-![](screenshot/2026-01-07.png)
+![](screenshot/2016-01-07.png)
+
 
 ## 💗 Thanks
 
