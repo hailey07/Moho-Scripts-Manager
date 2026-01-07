@@ -9,8 +9,25 @@ import webbrowser
 from tkinter import filedialog, messagebox
 from PIL import Image
 
+# --- 获取路径 ---
+def get_app_data_path():
+    """获取跨平台的数据存储路径 (用户主目录)"""
+    home = os.path.expanduser("~")
+    # 在用户主目录下创建一个 .moho_manager 文件夹来存配置
+    app_data_dir = os.path.join(home, ".moho_tool_manager")
+    
+    if not os.path.exists(app_data_dir):
+        try:
+            os.makedirs(app_data_dir)
+        except Exception as e:
+            print(f"无法创建配置文件夹: {e}")
+            return home # 如果失败，回退到主目录
+            
+    return app_data_dir
+
 # --- 配置与常量 ---
-CONFIG_FILE = "script_manager_config.json"
+APP_DATA_DIR = get_app_data_path()
+CONFIG_FILE = os.path.join(APP_DATA_DIR, "config.json") # 配置文件存到用户目录
 PLACEHOLDER_ICON = "❓"
 BTN_WIDTH = 180
 
