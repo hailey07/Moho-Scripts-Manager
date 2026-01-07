@@ -28,38 +28,38 @@
 ---
 
 ## 🛠️ Installation and Running:
+
 Ensure that your computer has [Python](https://www.python.org/downloads/) installed.
-1. Download [MohoScriptManager.py](https://github.com/hailey07/Moho-Scripts-Manager/releases/download/2026-01-07/MohoScriptsManager.py) to your local machine.
+
+1. 下载 [MohoScriptManager.py](https://github.com/hailey07/Moho-Scripts-Manager/blob/main/MohoScriptsManager.py)  or [Moho Scripts Manager V1.zip](https://github.com/hailey07/Moho-Scripts-Manager/releases/download/2026-01-08/Moho.Scripts.Manager.V1.zip) to your local machine.
 
 2. Install dependencies
-   
-Open Terminal or CMD and run the following command:
 
-```
-pip install customtkinter Pillow
-```
+	Open Terminal or CMD and run the following command:
+	  ```
+	  pip install customtkinter Pillow
+	  ```
+	  
+3. Run the tool
 
-3. Open Terminal or CMD and navigate to the folder containing the ``MohoScriptsManager.py`` file.
-
-4. Run the tool
-
-```
-python MohoScriptsManager.py
-
-or
-
-python3 MohoScriptsManager.py
-```
-
+  - Method 1: Unzip ``Moho Scripts Manager V1.zip``, then double-click to run ``Moho Scripts Manager V1``.
+  
+  - Method 2: Open Terminal or CMD and navigate to the folder containing the ``MohoScriptsManager.py`` file.
+	```
+	python MohoScriptsManager.py
+	或
+	python3 MohoScriptsManager.py
+	```
+	
 ---
 
 ## 📖 Usage:
 1. **Initial Launch**:
-	- Open the software and click the **"📂 Select Tool Folder"** in the upper left corner.
+	- Open the software and click the **``📂 Select Tool Folder``** in the upper left corner.
 	- Navigate to the `scripts/tool` folder within your custom Moho folder.
 
 2. **Add Script**:
-	- Click **"➕ Add Files"** and select the downloaded `.lua` file.
+	- Click **``➕ Add Files``** and select the downloaded `.lua` file.
 	- If there's a `.png` file with the same name in the same directory, the tool will automatically copy it.
 	- If the script needs to associate with resources, the tool will display a pop-up notification.
 
