@@ -26,17 +26,24 @@
 ---
 
 ## 🛠️ 安装与运行：
+
 确保你的电脑已安装 [Python](https://www.python.org/downloads/)。
-1. 下载 [MohoScriptManager.py](https://github.com/hailey07/Moho-Scripts-Manager/releases/download/2026-01-07/MohoScriptsManager.py) 到本地。
+
+1. 下载  [MohoScriptManager.py](https://github.com/hailey07/Moho-Scripts-Manager/blob/main/MohoScriptsManager.py)  or [Moho Scripts Manager V1.zip](https://github.com/hailey07/Moho-Scripts-Manager/releases/download/2026-01-08/Moho.Scripts.Manager.V1.zip) 到本地。
+
 2. 安装依赖库
 
     打开终端（Terminal）或命令提示符（CMD），运行以下命令：
     ```
     pip install customtkinter Pillow
     ```
-3. 打开 Terminal 或 CMD，进入 ``MohoScriptsManager.py`` 文件所在的文件夹
-4. 运行工具
 
+3. 运行工具
+
+   - 方法 1：解压 ``Moho Scripts Manager V1.zip`` 文件，双击运行 ``Moho Scripts Manager V1``
+   
+   - 方法 2：打开 Terminal 或 CMD，进入 ``MohoScriptsManager.py`` 文件所在的文件夹
+   
     ```
     python MohoScriptsManager.py
 
@@ -49,11 +56,11 @@
 
 ## 📖 使用方法：
 1. **初次启动**：
-    - 打开软件，点击左上角的 **"📂 选择 Tool 文件夹"**。
+    - 打开软件，点击左上角的 **``📂 选择 Tool 文件夹``**。
     - 定位到你的 Moho 自定义文件夹下的 `scripts/tool` 文件夹。
 
 2. **添加脚本**：
-    - 点击 **"＋ 添加文件"**，选择下载好的 `.lua` 文件。
+    - 点击 **``＋ 添加文件``**，选择下载好的 `.lua` 文件。
     - 如果同目录下有同名 `.png`，工具会自动一起复制。
     - 如果脚本需要关联资源，工具会弹窗提示。
 
