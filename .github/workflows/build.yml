@@ -1,0 +1,46 @@
+name: Build Moho Manager EXE
+
+on:
+  push:
+    branches: [ "main" ]  # 当推送到 main 分支时自动触发
+  workflow_dispatch:      # 允许在 GitHub 网页上手动点击运行
+
+jobs:
+  build:
+    runs-on: windows-latest  # 使用微软官方的纯净 Windows 环境
+
+    steps:
+    # 1. 拉取代码
+    - uses: actions/checkout@v4
+
+    # 2. 设置 Python 3.10 (解决 DLL 路径问题)
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+        cache: 'pip'
+
+    # 3. 安装依赖
+    # 确保你的 requirements.txt 里包含 PyQt6
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyinstaller
+        pip install -r requirements.txt
+
+    # 4. 运行打包命令 (关键步骤)
+    # --onefile: 单文件
+    # --noconsole: 隐藏黑框
+    # --icon="icon.ico": 设置 exe 文件图标
+    # --add-data "icon.ico;.": 将图标打包进程序内部(供窗口左上角调用)
+    - name: Build EXE
+      run: |
+        pyinstaller --noconsole --onefile --icon="icon.ico" --add-data "icon.ico;." --name "Moho Scripts Manager V2" MohoScriptsManager-win.py
+
+    # 5. 上传打包结果
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: MohoScriptsManager-EXE
+        path: dist/MohoScriptsManager.exe
+        retention-days: 5
